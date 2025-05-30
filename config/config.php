@@ -2,10 +2,10 @@
 	session_start();
 
 	// Define database
-	define('dbhost', 'localhost:3306');
-	define('dbuser', 'user');
-	define('dbpass', 'user');
-	define('dbname', 'newrent');
+	define('dbhost', 'rent-server-phpapp:3306');
+	define('dbuser', 'rent-server-phpapp-admin');
+	define('dbpass', '$c33UBUFnS0XP2kp');
+	define('dbname', 'rent-database');
 
 	// Connecting database
 	try {
