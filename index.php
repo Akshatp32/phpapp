@@ -127,7 +127,7 @@
       <div class="container">
         <div class="intro-text">
           <div class="intro-lead-in">Welcome To Room Rental Registration!</div>
-          <div class="intro-heading text-uppercase">I'm Gladdly Happy to see you:)<br></div>
+          <div class="intro-heading text-uppercase">Hello Guys, Nice to see you:)<br></div>
         </div>
       </div>
     </header>
