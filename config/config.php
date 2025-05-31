@@ -1,19 +1,16 @@
 <?php
-	session_start();
+// PHP Data Objects(PDO) Sample Code:
+try {
+    $conn = new PDO("sqlsrv:server = tcp:villarentdb.database.windows.net,1433; Database = villadb", "villarentdb-admin", "Aksh@t32");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch (PDOException $e) {
+    print("Error connecting to SQL Server.");
+    die(print_r($e));
+}
 
-	// Define database
-	define('dbhost', 'rent-server-phpapp:3306');
-	define('dbuser', 'rent-server-phpapp-admin');
-	define('dbpass', '$c33UBUFnS0XP2kp');
-	define('dbname', 'rent-database');
-
-	// Connecting database
-	try {
-		$connect = new PDO("mysql:host=".dbhost."; dbname=".dbname, dbuser, dbpass);
-		$connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	}
-	catch(PDOException $e) {
-		echo $e->getMessage();
-	}
-
+// SQL Server Extension Sample Code:
+$connectionInfo = array("UID" => "villarentdb-admin", "pwd" => "Aksh@t32", "Database" => "villadb", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$serverName = "tcp:villarentdb.database.windows.net,1433";
+$conn = sqlsrv_connect($serverName, $connectionInfo);
 ?>
